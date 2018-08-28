@@ -1,0 +1,73 @@
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-1">
+                    <h1><%= image_tag 'guitarlogo.png', id: "guitar-logo"%></h1>
+
+
+                    <h2><i class="fa fa-rocket"></i> What is guitar challenge?</h2>
+
+                    <p>A guitar challenge is a space where we are going to give you an audio or video and you are going to need to make a solo or riff (depending on challenge) on top of the audio and files that we provide to you, then base on likes and quality of solo we are gonna choose the best one to win some awesome prizes.</p>
+                    <h2><i class="fa fa-heart"></i> Why participate?</h2>
+                    <p>Well not only to win some awesome prizes but you can get exposure online and who knows play for the band of your dreams and of course improve as a musician! SIGN UP and we are gonna let you know when the challenge starts!</p>
+
+
+                    <ul class="list-inline">
+                      <!--<li>
+                        <a href="../../../index.html"><i class="fa fa-twitter fa-2x fa-fw"></i></a>
+                      </li>-->
+                      <!-- <%= link_to do %>
+                        <i class="fa fa-youtube fa-2x  fa-fw"></i>
+                      <% end %> -->
+
+                      <%= link_to "https://www.instagram.com/phil_the_guitarist", target: :blank do %>
+                        <i class="fa fa-instagram fa-2x  fa-fw"></i>
+                      <% end%>
+                      <%= mail_to "fe.valdiviaa@gmail.com" do %>
+                        <i class="fa fa-envelope-o fa-2x  fa-fw"></i>
+                      <% end %>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-md-4 col-md-offset-1">
+                    <!-- Contact Form - Enter your email address on line 17 of the mail/contact_me.php file to make this form work. -->
+                    <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+                    <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+
+                    <%= form_for @account, url: "/account", :html => {:id => "contactForm"} do |f|%>
+                      <h2>Get Notify when we go online!</h2>
+                      <p>Don’t miss this Great Opportunity of winning cool prizes</p>
+
+                      <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <%= f.text_field :name, autofocus: true, class: "form-control input-lg", id: "name", placeholder: "Full Name" %>
+                            <span class="help-block text-danger"></span>
+                        </div>
+                      </div>
+
+                      <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                              <%= f.text_field :email, class: "form-control input-lg", id: "email", placeholder: "youremail@gmail.com" %>
+                              <span class="help-block text-danger"></span>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="form-group col-xs-12">
+                          <%= f.button :submit, :class=> "btn btn-lg btn-primary btn-block" %>
+                        </div>
+                      </div>
+                      
+                    <% end %>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
